@@ -5,13 +5,11 @@ import "./main.css";
 
 const Main = () => {
   const [activeLink, setActiveLink] = useState("Home");
-  const [length, setLength] = useState();
-  const animatedTitle = useTextAnimation(activeLink, length);
+  const animatedTitle = useTextAnimation(activeLink);
   const animatedFooter = useTextAnimation("2023 Marcel Peda.");
 
   const changePage = (activeLinkName) => {
     setActiveLink(activeLinkName);
-    setLength(activeLinkName.length);
   };
 
   return (

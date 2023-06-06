@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-const useTextAnimation = (initialText, length) => {
+const useTextAnimation = (initialText) => {
   const [text, setText] = useState(initialText);
 
   useEffect(() => {
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let iterations = 0;
 
     const interval = setInterval(() => {
@@ -21,8 +20,7 @@ const useTextAnimation = (initialText, length) => {
         return newText;
       });
 
-      // if (iterations >= initialText.length) clearInterval(interval);
-      if (iterations >= length) clearInterval(interval);
+      if (iterations >= initialText.length) clearInterval(interval);
 
       iterations += 1 / 3;
     }, 30);
