@@ -2,18 +2,10 @@
   position: relative;
 }
 
-#content {
-  width: 80%;
-  margin-left: 5rem;
-  display: flex;
-}
-
-/* ---------------------------- */
-/* --- DESCRIPTION ABOUT ME --- */
-/* ---------------------------- */
 #description {
-  width: 80%;
-  margin-right: 2rem;
+  margin-top: -1rem;
+  width: 60%;
+  margin-left: 12rem;
 }
 
 #description > h1 {
