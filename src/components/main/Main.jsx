@@ -1,8 +1,8 @@
 import useTextAnimation from "../../helper/useTextAnimation";
-import links from "./links";
 import "./main.css";
 
 const Main = ({ animatedTitle, switchPage, activeLink }) => {
+  const links = ["Home", "Skills", "Projekte", "Kontakt"];
   const animatedFooter = useTextAnimation("2023 Marcel Peda.");
 
   return (
@@ -12,11 +12,11 @@ const Main = ({ animatedTitle, switchPage, activeLink }) => {
         <ul>
           {links.map((link, index) => (
             <li
-              onClick={() => switchPage(link.name)}
-              className={activeLink === link.name ? "active" : ""}
+              onClick={() => switchPage(link)}
+              className={activeLink === link ? "active" : ""}
               key={index}
             >
-              {link.name}
+              {link}
             </li>
           ))}
         </ul>
