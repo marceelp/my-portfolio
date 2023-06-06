@@ -1,0 +1,43 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1920px;
+  height: fit-content;
+  padding: 5rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+#nav__logo {
+  width: 5rem;
+  transition: var(--transition);
+}
+#nav__logo:hover {
+  transform: scale(1.1);
+}
+
+.nav__icon {
+  font-size: 2.4rem;
+  margin-left: 3rem;
+  transition: var(--transition);
+}
+.nav__icon:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.nav__icon-one:hover {
+  color: #f1502f;
+}
+
+.nav__icon-two:hover {
+  color: #c13584;
+}
+
+.nav__icon-three:hover {
+  color: #ff0000;
+}

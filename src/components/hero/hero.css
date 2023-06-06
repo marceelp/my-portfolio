@@ -1,0 +1,39 @@
+#hero__section {
+  position: relative;
+}
+
+#content {
+  width: 80%;
+  margin-left: 5rem;
+  display: flex;
+}
+
+/* ---------------------------- */
+/* --- DESCRIPTION ABOUT ME --- */
+/* ---------------------------- */
+#description {
+  width: 80%;
+  margin-right: 2rem;
+}
+
+#description > h1 {
+  margin-bottom: 3rem;
+}
+
+#description > p {
+  padding-right: 8rem;
+  position: relative;
+  transform: translateX(2rem);
+}
+#description > p::before {
+  content: "";
+  position: absolute;
+  left: -3rem;
+  width: 1px;
+  height: 100%;
+  background: var(--vertical-gradient);
+}
+
+#contact-icon {
+  margin: 3rem 3rem 0 0;
+}

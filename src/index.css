@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "System Code";
+  src: url(/src/assets/fonts/system-code-regular.ttf);
+}
+
+:root {
+  --white: #ffffff;
+  --light: #bebebe;
+  --dark: #131313;
+  --horizon-gradient: linear-gradient(90deg, #00cea8 1.9%, #bf61ff 97.5%);
+  --vertical-gradient: linear-gradient(180deg, #00cea8 1.9%, #bf61ff 97.5%);
+  --transition: all 0.3s ease;
+}
+
+html {
+  font-family: "System Code", monospace;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+body {
+  max-width: 1920px;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  background-color: var(--dark);
+  color: var(--light);
+  overflow: hidden;
+}
+
+section {
+  padding: 22rem 12rem 5rem;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+small {
+  cursor: default;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-weight: 400;
+}
