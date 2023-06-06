@@ -1,0 +1,87 @@
+#contact__section {
+  position: relative;
+  z-index: 1;
+}
+
+#contact__section > img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 1px solid var(--light);
+  position: absolute;
+  top: 20rem;
+  left: 25rem;
+}
+
+.contact__icon {
+  font-size: 2.4rem;
+  top: 22rem;
+  transition: var(--transition);
+}
+.contact__icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.gmail {
+  position: absolute;
+  left: 35rem;
+}
+.gmail:hover {
+  color: #c71610;
+}
+
+.whatsapp {
+  position: absolute;
+  left: 41rem;
+}
+.whatsapp:hover {
+  color: #25d366;
+}
+
+form {
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 25rem;
+  bottom: 10rem;
+}
+
+input,
+textarea,
+button {
+  font-family: "System Code", monospace;
+  background-color: transparent;
+  border: 0.1px solid var(--light);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: var(--light);
+  letter-spacing: 1px;
+  outline: none;
+}
+
+input:nth-of-type(2) {
+  width: 90%;
+}
+
+textarea {
+  width: 80%;
+  resize: none;
+}
+
+button {
+  width: 10rem;
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--horizon-gradient);
+  background-size: 200% 100%;
+  background-position: left;
+  transition: var(--transition);
+  color: var(--dark);
+}
+button:hover {
+  background-position: right;
+  transform: scale(1.1);
+}

@@ -19,10 +19,10 @@ const App = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Hero activeLink={activeLink} />
+      <Skills activeLink={activeLink} />
+      <Projects activeLink={activeLink} />
+      <Contact activeLink={activeLink} />
       <Main
         switchPage={switchPage}
         animatedTitle={animatedTitle}

@@ -6,7 +6,7 @@ const Main = ({ animatedTitle, switchPage, activeLink }) => {
   const animatedFooter = useTextAnimation("2023 Marcel Peda.");
 
   return (
-    <main id="main">
+    <main id="main__section">
       <div id="menu">
         <h3>{animatedTitle}</h3>
         <ul>

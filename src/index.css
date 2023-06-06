@@ -9,7 +9,7 @@
   --dark: #131313;
   --horizon-gradient: linear-gradient(90deg, #00cea8 1.9%, #bf61ff 97.5%);
   --vertical-gradient: linear-gradient(180deg, #00cea8 1.9%, #bf61ff 97.5%);
-  --transition: all 0.3s ease;
+  --transition: all 0.4s ease;
 }
 
 html {
@@ -73,4 +73,12 @@ h4 {
 
 p {
   font-weight: 400;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
 }

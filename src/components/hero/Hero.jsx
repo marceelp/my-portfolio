@@ -1,11 +1,14 @@
 import useTextAnimation from "../../helper/useTextAnimation";
 import "./hero.css";
 
-const Hero = () => {
+const Hero = ({ activeLink }) => {
   const heading = useTextAnimation("Willkommen.");
 
   return (
-    <section id="hero__section">
+    <section
+      id="hero__section"
+      className={activeLink === "Home" ? "visible" : "invisible"}
+    >
       <article id="content">
         <div id="description">
           <h1>{heading}</h1>

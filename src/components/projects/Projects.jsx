@@ -1,8 +1,11 @@
 import "./projects.css";
 
-const Projects = () => {
+const Projects = ({ activeLink }) => {
   return (
-    <section>
+    <section
+      id="projects__section"
+      className={activeLink === "Kontakt" ? "visible" : "invisible"}
+    >
       <div>Projects</div>
     </section>
   );
