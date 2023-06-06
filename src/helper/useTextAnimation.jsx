@@ -12,6 +12,7 @@ const useTextAnimation = (initialText) => {
         const newText = prevText
           .split("")
           .map((letter, i) => {
+            console.log(i, iterations);
             if (i < iterations) return initialText[i];
             return letters[Math.floor(Math.random() * 26)];
           })
@@ -19,8 +20,6 @@ const useTextAnimation = (initialText) => {
 
         return newText;
       });
-
-      if (iterations >= initialText.length) clearInterval(interval);
 
       iterations += 1 / 3;
     }, 30);

@@ -1,3 +1,6 @@
+import { useState } from "react";
+import useTextAnimation from "./helper/useTextAnimation";
+
 import Header from "./components/header/Header";
 import Hero from "./components/hero/hero";
 import Skills from "./components/skills/Skills";
@@ -6,6 +9,13 @@ import Contact from "./components/contact/Contact";
 import Main from "./components/main/Main";
 
 const App = () => {
+  const [activeLink, setActiveLink] = useState("Home");
+  const animatedTitle = useTextAnimation(activeLink);
+
+  const switchPage = (activeLinkName) => {
+    setActiveLink(activeLinkName);
+  };
+
   return (
     <>
       <Header />
@@ -13,7 +23,11 @@ const App = () => {
       <Skills />
       <Projects />
       <Contact />
-      <Main />
+      <Main
+        switchPage={switchPage}
+        animatedTitle={animatedTitle}
+        activeLink={activeLink}
+      />
     </>
   );
 };

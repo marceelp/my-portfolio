@@ -18,7 +18,7 @@ const Hero = () => {
             <br />
             <br />
             Ich bin daran interessiert, moderne User Interfaces und intuitiv
-            gestaltete User Experiences zu entwickeln.
+            gestaltete User Experiences zu erschaffen.
           </p>
         </div>
       </article>

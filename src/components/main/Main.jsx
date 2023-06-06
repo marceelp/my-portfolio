@@ -1,16 +1,9 @@
-import { useState } from "react";
 import useTextAnimation from "../../helper/useTextAnimation";
 import links from "./links";
 import "./main.css";
 
-const Main = () => {
-  const [activeLink, setActiveLink] = useState("Home");
-  const animatedTitle = useTextAnimation(activeLink);
+const Main = ({ animatedTitle, switchPage, activeLink }) => {
   const animatedFooter = useTextAnimation("2023 Marcel Peda.");
-
-  const changePage = (activeLinkName) => {
-    setActiveLink(activeLinkName);
-  };
 
   return (
     <main id="main">
@@ -19,7 +12,7 @@ const Main = () => {
         <ul>
           {links.map((link, index) => (
             <li
-              onClick={() => changePage(link.name)}
+              onClick={() => switchPage(link.name)}
               className={activeLink === link.name ? "active" : ""}
               key={index}
             >
