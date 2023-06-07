@@ -2,7 +2,7 @@ import useTextAnimation from "../../animations/useTextAnimation";
 import "./hero.css";
 
 const Hero = ({ activeLink }) => {
-  const heading = useTextAnimation("Willkommen.", 4800);
+  const heading = useTextAnimation("Willkommen.", 4200);
 
   return (
     <section

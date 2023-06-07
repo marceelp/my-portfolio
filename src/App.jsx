@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       preloaderAnimation();
-    }, 4500);
+    }, 4000);
     return () => clearTimeout(timeout);
   }, []);
 

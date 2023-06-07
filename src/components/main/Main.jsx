@@ -4,7 +4,7 @@ import "./main.css";
 
 const Main = ({ activeLink, switchPage }) => {
   const links = ["Home", "Skills", "Projekte", "Kontakt"];
-  const animatedFooter = useTextAnimation("2023 Marcel Peda.", 4500);
+  const animatedFooter = useTextAnimation("2023 Marcel Peda.", 4200);
   const [animatedTitle, setAnimatedTitle] = useState(activeLink);
 
   useEffect(() => {
