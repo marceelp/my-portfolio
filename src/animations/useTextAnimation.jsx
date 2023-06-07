@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useTextAnimation = (initialText, delay) => {
+const useTextAnimation = (initialText, delay = 0) => {
   const [text, setText] = useState(initialText);
 
   useEffect(() => {
@@ -13,7 +13,6 @@ const useTextAnimation = (initialText, delay) => {
           const newText = prevText
             .split("")
             .map((letter, i) => {
-              console.log(i, iterations);
               if (i < iterations) return initialText[i];
               return letters[Math.floor(Math.random() * 26)];
             })
@@ -22,9 +21,12 @@ const useTextAnimation = (initialText, delay) => {
           return newText;
         });
 
+        if (iterations >= text.length) return text;
+
         iterations += 1 / 3;
       }, 30);
 
+      console.log("animation successfull");
       return () => clearInterval(interval);
     }, delay);
 
