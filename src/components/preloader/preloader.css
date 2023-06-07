@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--dark);
+  background-color: black;
   color: var(--light);
   z-index: 9999;
 }
@@ -17,7 +17,7 @@
 }
 
 #preloader-text {
-  animation: fade 3s 1s forwards;
+  animation: fade 4s 1s forwards;
   opacity: 0;
 }
 

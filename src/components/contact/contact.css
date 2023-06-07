@@ -11,6 +11,7 @@
   position: absolute;
   top: 18rem;
   left: 28rem;
+  transform: rotate(-12deg);
 }
 
 .contact__icon {

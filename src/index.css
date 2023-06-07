@@ -75,10 +75,36 @@ p {
   font-weight: 400;
 }
 
+small {
+  font-size: 1.3rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .visible {
+  animation: fadeIn 2s ease-in-out forwards;
   display: block;
 }
 
 .invisible {
+  animation: fadeOut 2s ease forwards;
   display: none;
+  pointer-events: none;
+  opacity: 0;
 }

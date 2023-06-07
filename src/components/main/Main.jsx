@@ -3,7 +3,7 @@ import "./main.css";
 
 const Main = ({ activeLink, switchPage }) => {
   const links = ["Home", "Skills", "Projekte", "Kontakt"];
-  const animatedFooter = useTextAnimation("2023 Marcel Peda.", 4200);
+  const animatedFooter = useTextAnimation("2023 Marcel Peda.", 4800);
   const animatedTitle = useTextAnimation(activeLink);
 
   return (
