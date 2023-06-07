@@ -10,7 +10,7 @@
   border: 1px solid var(--light);
   position: absolute;
   top: 18rem;
-  left: 28rem;
+  left: 30rem;
   transform: rotate(-12deg);
 }
 
@@ -26,7 +26,7 @@
 
 .gmail {
   position: absolute;
-  left: 38rem;
+  left: 40rem;
 }
 .gmail:hover {
   color: #c71610;
@@ -34,7 +34,7 @@
 
 .whatsapp {
   position: absolute;
-  left: 44rem;
+  left: 46rem;
 }
 .whatsapp:hover {
   color: #25d366;
@@ -45,7 +45,7 @@ form {
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 28rem;
+  left: 30rem;
   bottom: 12rem;
 }
 

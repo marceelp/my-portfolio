@@ -3,13 +3,14 @@ import "./preloader.css";
 
 const Preloader = () => {
   const animatedName = useTextAnimation("Marcel Peda", 1000);
-  const animatedSpan = useTextAnimation("Portfolio", 1000);
+  const animatedPortfolio = useTextAnimation("Portfolio", 1000);
 
   return (
     <div id="preloader">
-      <h3 id="preloader-text">
-        {animatedName} <span id="preloader-span">{animatedSpan}</span>
-      </h3>
+      <div id="preloader-text">
+        <h3>{animatedName}</h3>
+        <h3 id="preloader-portfolio">{animatedPortfolio}</h3>
+      </div>
     </div>
   );
 };

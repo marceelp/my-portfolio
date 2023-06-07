@@ -8,8 +8,8 @@ const Projects = ({ activeLink }) => {
       className={activeLink === "Projekte" ? "visible" : "invisible"}
     >
       <ul id="projects__menu">
-        {projects.map((project) => (
-          <li className="projects__item">
+        {projects.map((project, index) => (
+          <li className="projects__item" key={index}>
             <h4>{project.title}</h4>
             <div className="projects__item-div">
               <p>{project.skills}</p>

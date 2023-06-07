@@ -1,15 +1,20 @@
+import { useEffect, useState } from "react";
 import useTextAnimation from "../../animations/useTextAnimation";
 import "./main.css";
 
 const Main = ({ activeLink, switchPage }) => {
   const links = ["Home", "Skills", "Projekte", "Kontakt"];
-  const animatedFooter = useTextAnimation("2023 Marcel Peda.", 4800);
-  const animatedTitle = useTextAnimation(activeLink);
+  const animatedFooter = useTextAnimation("2023 Marcel Peda.", 4500);
+  const [animatedTitle, setAnimatedTitle] = useState(activeLink);
+
+  useEffect(() => {
+    setAnimatedTitle(activeLink);
+  }, [activeLink]);
 
   return (
     <main id="main__section">
       <div id="menu">
-        <h3>{animatedTitle}</h3>
+        <h3>{useTextAnimation(animatedTitle)}</h3>
         <ul>
           {links.map((link, index) => (
             <li
