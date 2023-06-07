@@ -1,9 +1,10 @@
 import useTextAnimation from "../../animations/useTextAnimation";
 import "./main.css";
 
-const Main = ({ animatedTitle, switchPage, activeLink }) => {
+const Main = ({ activeLink, switchPage }) => {
   const links = ["Home", "Skills", "Projekte", "Kontakt"];
-  const animatedFooter = useTextAnimation("2023 Marcel Peda.", 3200);
+  const animatedFooter = useTextAnimation("2023 Marcel Peda.", 4200);
+  const animatedTitle = useTextAnimation(activeLink);
 
   return (
     <main id="main__section">

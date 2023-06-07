@@ -12,6 +12,21 @@
   z-index: 9999;
 }
 
-#preloader span {
+#preloader-span {
   color: var(--white);
+}
+
+#preloader-text {
+  animation: fade 3s 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }

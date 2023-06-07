@@ -1,20 +1,14 @@
 import { gsap } from "gsap";
 
 const preloaderAnimation = () => {
-  gsap.to("#preloader-text", {
+  gsap.to("#preloader", {
     opacity: 0,
-    duration: 1,
+    duration: 3,
     onComplete: () => {
-      document.querySelector("#page").style.display = "block";
-      gsap.to("#preloader", {
-        opacity: 0,
-        duration: 3,
-        onComplete: () => {
-          document.querySelector("#preloader").style.display = "none";
-        },
-      });
+      document.querySelector("#preloader").style.display = "none";
     },
   });
+  return () => clearTimeout(timeout);
 };
 
 export default preloaderAnimation;

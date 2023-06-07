@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import preloaderAnimation from "./animations/preloaderAnimation";
-import useTextAnimation from "./animations/useTextAnimation";
 
 import Preloader from "./components/preloader/Preloader";
 import Header from "./components/header/Header";
@@ -12,7 +11,6 @@ import Main from "./components/main/Main";
 
 const App = () => {
   const [activeLink, setActiveLink] = useState("Home");
-  const animatedTitle = useTextAnimation(activeLink);
 
   const switchPage = (activeLinkName) => {
     setActiveLink(activeLinkName);
@@ -21,7 +19,7 @@ const App = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       preloaderAnimation();
-    }, 2000);
+    }, 4000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -34,11 +32,7 @@ const App = () => {
         <Skills activeLink={activeLink} />
         <Projects activeLink={activeLink} />
         <Contact activeLink={activeLink} />
-        <Main
-          switchPage={switchPage}
-          animatedTitle={animatedTitle}
-          activeLink={activeLink}
-        />
+        <Main activeLink={activeLink} switchPage={switchPage} />
       </div>
     </>
   );
