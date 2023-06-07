@@ -1,4 +1,13 @@
 #projects__section {
   position: relative;
-  display: none;
+}
+
+#projects__menu {
+  position: absolute;
+  top: 18rem;
+  left: 40rem;
+}
+
+.projects__item {
+  margin-bottom: 3rem;
 }

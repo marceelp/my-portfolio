@@ -31,6 +31,10 @@ a {
   color: var(--light);
 }
 
+#page {
+  display: none;
+}
+
 body {
   max-width: 1920px;
   font-size: 1.6rem;

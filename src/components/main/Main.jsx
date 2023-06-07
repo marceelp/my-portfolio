@@ -1,4 +1,4 @@
-import useTextAnimation from "../../helper/useTextAnimation";
+import useTextAnimation from "../../animations/useTextAnimation";
 import "./main.css";
 
 const Main = ({ animatedTitle, switchPage, activeLink }) => {

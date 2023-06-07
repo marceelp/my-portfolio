@@ -1,6 +1,8 @@
-import { useState } from "react";
-import useTextAnimation from "./helper/useTextAnimation";
+import { gsap } from "gsap";
+import { useEffect, useState } from "react";
+import useTextAnimation from "./animations/useTextAnimation";
 
+import Preloader from "./components/preloader/Preloader";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/hero";
 import Skills from "./components/skills/Skills";
@@ -16,18 +18,42 @@ const App = () => {
     setActiveLink(activeLinkName);
   };
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      gsap.to("#preloader-text", {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+          document.querySelector("#page").style.display = "block";
+          gsap.to("#preloader", {
+            opacity: 0,
+            duration: 3,
+            onComplete: () => {
+              document.querySelector("#preloader").style.display = "none";
+            },
+          });
+        },
+      });
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <>
-      <Header />
-      <Hero activeLink={activeLink} />
-      <Skills activeLink={activeLink} />
-      <Projects activeLink={activeLink} />
-      <Contact activeLink={activeLink} />
-      <Main
-        switchPage={switchPage}
-        animatedTitle={animatedTitle}
-        activeLink={activeLink}
-      />
+      <Preloader />
+      <div id="page">
+        <Header />
+        <Hero activeLink={activeLink} />
+        <Skills activeLink={activeLink} />
+        <Projects activeLink={activeLink} />
+        <Contact activeLink={activeLink} />
+        <Main
+          switchPage={switchPage}
+          animatedTitle={animatedTitle}
+          activeLink={activeLink}
+        />
+      </div>
     </>
   );
 };
