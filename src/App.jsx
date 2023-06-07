@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
 import { useEffect, useState } from "react";
+import preloaderAnimation from "./animations/preloaderAnimation";
 import useTextAnimation from "./animations/useTextAnimation";
 
 import Preloader from "./components/preloader/Preloader";
@@ -20,22 +20,8 @@ const App = () => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      gsap.to("#preloader-text", {
-        opacity: 0,
-        duration: 1,
-        onComplete: () => {
-          document.querySelector("#page").style.display = "block";
-          gsap.to("#preloader", {
-            opacity: 0,
-            duration: 3,
-            onComplete: () => {
-              document.querySelector("#preloader").style.display = "none";
-            },
-          });
-        },
-      });
+      preloaderAnimation();
     }, 2000);
-
     return () => clearTimeout(timeout);
   }, []);
 

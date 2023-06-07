@@ -26,13 +26,10 @@ const useTextAnimation = (initialText, delay = 0) => {
         iterations += 1 / 3;
       }, 30);
 
-      console.log("animation successfull");
       return () => clearInterval(interval);
     }, delay);
 
-    return () => {
-      clearTimeout(timeout);
-    };
+    return () => clearTimeout(timeout);
   }, [initialText]);
 
   return text;
