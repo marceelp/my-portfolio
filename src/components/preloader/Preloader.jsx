@@ -6,10 +6,10 @@ const Preloader = () => {
   const animatedPortfolio = useTextAnimation("Portfolio", 1000);
 
   return (
-    <div id="preloader">
-      <div id="preloader-text">
+    <div className="preloader">
+      <div className="preloader--text">
         <h3>{animatedName}</h3>
-        <h3 id="preloader-portfolio">{animatedPortfolio}</h3>
+        <h3 className="preloader--portfolio">{animatedPortfolio}</h3>
       </div>
     </div>
   );

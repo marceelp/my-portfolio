@@ -1,43 +1,43 @@
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   max-width: 1920px;
   height: fit-content;
   padding: 5rem 10rem;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   z-index: 2;
 }
 
-#nav__logo {
+.nav--logo {
   width: 5rem;
   transition: var(--transition);
 }
-#nav__logo:hover {
+.nav--logo:hover {
   transform: scale(1.1);
 }
 
-.nav__icon {
+.nav--icon {
   font-size: 2.4rem;
   margin-left: 3rem;
   transition: var(--transition);
 }
-.nav__icon:hover {
+.nav--icon:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.nav__icon-one:hover {
+.nav--icon-one:hover {
   color: #f1502f;
 }
 
-.nav__icon-two:hover {
+.nav--icon-two:hover {
   color: #c13584;
 }
 
-.nav__icon-three:hover {
+.nav--icon-three:hover {
   color: #ff0000;
 }

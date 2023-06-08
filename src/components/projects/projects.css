@@ -1,69 +1,67 @@
-#projects__section {
+.projects--section {
   position: relative;
   z-index: 2;
 }
 
-#projects__menu {
+.projects--menu {
   position: absolute;
   top: 22rem;
   left: 40rem;
 }
-#projects__menu::before {
+.projects--menu::before {
   content: "";
   position: absolute;
   top: 0;
   left: -3rem;
-  width: 1px;
   height: 100%;
+  width: 1px;
   background: var(--vertical-gradient);
 }
 
-.projects__item {
+.projects--project:not(:last-of-type) {
   margin-bottom: 3rem;
 }
-.projects__item:last-of-type {
-  margin-bottom: 0;
-}
 
-.projects__item > h4 {
+.projects--project-title {
   margin-bottom: 0.2rem;
 }
 
-.projects__item-div {
+.projects--project-div {
   display: flex;
   align-items: center;
   width: 36rem;
   justify-content: space-between;
 }
 
-.projects__item-div > p {
+.projects--project-div > p {
   margin-right: 3rem;
 }
 
-.project__link {
+.projects--project-link {
   font-size: 1.3rem;
   transition: var(--transition);
   color: var(--light);
   cursor: pointer;
 }
-.project__link:hover {
-  transform: scale(1.1);
-  color: var(--white);
-}
 
-.project__link::before {
+.projects--project-link::before {
   content: "";
   width: 100%;
   height: 1px;
   position: absolute;
   bottom: -3px;
-  background-color: var(--light);
-  background: var(--horizon-gradient);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
+  background: var(--horizontal-gradient);
 }
-.project__link:hover::before {
+
+.projects--project-link:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.projects--project-link:hover {
+  transform: scale(1.1);
+  color: var(--white);
 }

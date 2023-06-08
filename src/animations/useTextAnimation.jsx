@@ -1,38 +1,45 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const useTextAnimation = (initialText, delay = 0) => {
   const [text, setText] = useState(initialText);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    updateText(initialText);
+
+    return () => clearTimeout(timeoutRef.current);
+  }, [timeoutRef]);
+
+  const updateText = (newText) => {
     let iterations = 0;
 
-    const timeout = setTimeout(() => {
+    clearTimeout(timeoutRef.current);
+
+    timeoutRef.current = setTimeout(() => {
       const interval = setInterval(() => {
-        setText((prevText) => {
-          const newText = prevText
-            .split("")
-            .map((letter, i) => {
-              if (i < iterations) return initialText[i];
-              return letters[Math.floor(Math.random() * 26)];
-            })
-            .join("");
-
-          return newText;
-        });
-
-        if (iterations >= text.length) return text;
+        setText(() => mixText(newText, iterations));
+        if (iterations >= newText.length) return clearInterval(interval);
 
         iterations += 1 / 3;
       }, 30);
 
       return () => clearInterval(interval);
     }, delay);
+  };
+  return [text, updateText];
+};
 
-    return () => clearTimeout(timeout);
-  }, [initialText]);
+const mixText = (newText, iterations) => {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const changedText = newText
+    .split("")
+    .map((letter, i) => {
+      if (i < iterations) return newText[i];
+      return letters[Math.floor(Math.random() * letters.length)];
+    })
+    .join("");
 
-  return text;
+  return changedText;
 };
 
 export default useTextAnimation;

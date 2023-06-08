@@ -7,9 +7,9 @@
   --white: #ffffff;
   --light: #bebebe;
   --dark: #131313;
-  --horizon-gradient: linear-gradient(90deg, #00cea8 1.9%, #bf61ff 97.5%);
+  --black: #000000;
+  --horizontal-gradient: linear-gradient(90deg, #00cea8 1.9%, #bf61ff 97.5%);
   --vertical-gradient: linear-gradient(180deg, #00cea8 1.9%, #bf61ff 97.5%);
-  --vertical-gradient2: linear-gradient(180deg, #bf61ff 97.5%, #00cea8 1.9%);
   --transition: all 0.4s ease;
 }
 
@@ -80,6 +80,18 @@ small {
   font-size: 1.3rem;
 }
 
+.visible {
+  animation: fadeIn 2s ease-in forwards;
+  pointer-events: all;
+  display: block;
+}
+
+.invisible {
+  animation: fadeOut 1s ease-out forwards;
+  pointer-events: none;
+  display: none;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -96,14 +108,4 @@ small {
   to {
     opacity: 0;
   }
-}
-
-.visible {
-  animation: fadeIn 2s ease-in forwards;
-  display: block;
-}
-
-.invisible {
-  animation: fadeOut 1s ease-out forwards;
-  display: none;
 }

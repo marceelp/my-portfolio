@@ -1,4 +1,4 @@
-#preloader {
+.preloader {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -12,12 +12,12 @@
   z-index: 9999;
 }
 
-#preloader-portfolio {
+.preloader--portfolio {
   color: var(--white);
   margin-left: 2rem;
 }
 
-#preloader-text {
+.preloader--text {
   animation: fade 3s 1s forwards;
   opacity: 0;
   display: flex;

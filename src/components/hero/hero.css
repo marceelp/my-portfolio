@@ -1,32 +1,27 @@
-#hero__section {
+.hero--section {
   position: relative;
 }
 
-#description {
+.hero--description {
   margin-top: -1rem;
-
   width: 60%;
   margin-left: 12rem;
 }
 
-#description > h1 {
+.hero--description > h1 {
   margin-bottom: 3rem;
 }
 
-#description > p {
+.hero--description > p {
   padding-right: 8rem;
   position: relative;
   transform: translateX(2rem);
 }
-#description > p::before {
+.hero--description > p::before {
   content: "";
   position: absolute;
   left: -3rem;
   width: 1px;
   height: 100%;
   background: var(--vertical-gradient);
-}
-
-#contact-icon {
-  margin: 3rem 3rem 0 0;
 }

@@ -5,16 +5,16 @@ import "./header.css";
 function Header() {
   return (
     <header>
-      <img src={LOGO} alt="Marcel Peda Logo" id="nav__logo" />
+      <img src={LOGO} alt="Marcel Peda Logo" className="nav--logo" />
       <div>
         <a href="https://instagram.com/marceelp">
-          <FaInstagram className="nav__icon nav__icon-two" />
+          <FaInstagram className="nav--icon nav--icon-two" />
         </a>
         <a href="https://github.com/marceelp">
-          <FaGithub className="nav__icon nav__icon-one" />
+          <FaGithub className="nav--icon nav--icon-one" />
         </a>
         <a href="#">
-          <FaSlack className="nav__icon nav__icon-three" />
+          <FaSlack className="nav--icon nav--icon-three" />
         </a>
       </div>
     </header>

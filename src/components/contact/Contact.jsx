@@ -5,12 +5,13 @@ import "./contact.css";
 const Contact = ({ activeLink }) => {
   return (
     <section
-      id="contact__section"
-      className={activeLink === "Kontakt" ? "visible" : "invisible"}
+      className={`contact--section ${
+        activeLink === "Kontakt" ? "visible" : "invisible"
+      }`}
     >
       <img src={ME} alt="Das bin ich - Marcel Peda." />
-      <SiGmail className="contact__icon gmail" />
-      <SiWhatsapp className="contact__icon whatsapp" />
+      <SiGmail className="contact--icon gmail" />
+      <SiWhatsapp className="contact--icon whatsapp" />
       <form action="" method="post">
         <input type="text" name="name" placeholder="Dein Name" />
         <input type="email" name="email" placeholder="Deine Email" />

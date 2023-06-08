@@ -6,10 +6,11 @@ const Hero = ({ activeLink }) => {
 
   return (
     <section
-      id="hero__section"
-      className={activeLink === "Home" ? "visible" : "invisible"}
+      className={`hero--section ${
+        activeLink === "Home" ? "visible" : "invisible"
+      }`}
     >
-      <article id="description">
+      <article className="hero--description">
         <h1>{heading}</h1>
         <p>
           Mein Name ist Marcel Peda.

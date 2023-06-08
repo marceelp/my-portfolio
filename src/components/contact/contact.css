@@ -1,9 +1,9 @@
-#contact__section {
+.contact--section {
   position: relative;
   z-index: 1;
 }
 
-#contact__section > img {
+.contact--section > img {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -14,12 +14,12 @@
   transform: rotate(-12deg);
 }
 
-.contact__icon {
+.contact--icon {
   font-size: 2.4rem;
   top: 20rem;
   transition: var(--transition);
 }
-.contact__icon:hover {
+.contact--icon:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
@@ -45,8 +45,8 @@ form {
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 30rem;
   bottom: 12rem;
+  left: 30rem;
 }
 
 input,
@@ -75,13 +75,14 @@ button {
   width: 10rem;
   margin-left: 5px;
   font-weight: bold;
-  cursor: pointer;
   background: var(--horizon-gradient);
   background-size: 200% 100%;
   background-position: left;
-  transition: var(--transition);
   color: var(--dark);
+  transition: var(--transition);
+  cursor: pointer;
 }
+
 button:hover {
   background-position: right;
   transform: scale(1.1);
