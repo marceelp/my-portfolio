@@ -1,0 +1,23 @@
+.home--section > h1 {
+  margin-bottom: 2rem;
+}
+
+.home--section > p {
+  margin-left: 3rem;
+  padding-right: 6rem;
+  position: relative;
+}
+
+.home--section > p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3rem;
+  height: 100%;
+  width: 1px;
+  background: var(--vertical-gradient);
+}
+
+.home--section > p > span {
+  color: var(--white);
+}

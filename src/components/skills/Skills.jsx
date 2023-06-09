@@ -1,4 +1,5 @@
 import { usePage } from "../../contexts/PageContext";
+import skills from "./skilldata";
 import "./skills.css";
 
 const Skills = () => {
@@ -10,7 +11,11 @@ const Skills = () => {
         page === "Skills" ? "visible" : "invisible"
       }`}
     >
-      <div>Skills</div>
+      <div className="skills--grid">
+        {skills.map((skill) => (
+          <div className="skills--skill">{skill}</div>
+        ))}
+      </div>
     </section>
   );
 };

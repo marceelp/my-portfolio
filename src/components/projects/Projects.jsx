@@ -13,14 +13,16 @@ const Projects = () => {
     >
       <ul className="projects--menu">
         {projects.map((project, index) => (
-          <li className="projects--project" key={index}>
-            <h4 className="projects--project-title">{project.title}</h4>
-            <div className="projects--project-div">
-              <p>{project.skills}</p>
-              <a href={project.link} className="projects--project-link">
-                Seite ansehen
-              </a>
-            </div>
+          <li className="project" key={index}>
+            <h2 className="project-title">{project.title}</h2>
+            <small className="project-skills">{project.skills}</small>
+            <p className="project-description">{project.description}</p>
+            <a href={project.github} className="project-a">
+              <span className="project-link">Github</span>
+            </a>
+            <a href={project.live} className="project-link">
+              <span>Seite ansehen</span>
+            </a>
           </li>
         ))}
       </ul>

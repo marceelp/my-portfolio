@@ -1,5 +1,4 @@
 import { usePage } from "../../contexts/PageContext";
-import { SiGmail, SiWhatsapp } from "react-icons/si";
 import ME from "../../assets/images/me.jpg";
 import "./contact.css";
 
@@ -13,8 +12,6 @@ const Contact = () => {
       }`}
     >
       <img src={ME} alt="Das bin ich - Marcel Peda." />
-      <SiGmail className="contact--icon gmail" />
-      <SiWhatsapp className="contact--icon whatsapp" />
       <form action="" method="post">
         <input type="text" name="name" placeholder="Dein Name" />
         <input type="email" name="email" placeholder="Deine Email" />
