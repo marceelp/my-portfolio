@@ -9,8 +9,8 @@
   --light: #bebebe;
   --dark: #131313;
   --black: #000000;
-  --horizontal-gradient: linear-gradient(90deg, #00cea8 1.9%, #bf61ff 97.5%);
-  --vertical-gradient: linear-gradient(180deg, #00cea8 1.9%, #bf61ff 97.5%);
+  --horizontal-gradient: linear-gradient(90deg, #ff4858 1.9%, #72f2eb 97.5%);
+  --vertical-gradient: linear-gradient(180deg, #ff4858 1.9%, #72f2eb 97.5%);
   --text-gradient: -webkit-linear-gradient(360deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 

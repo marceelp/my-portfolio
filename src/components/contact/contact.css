@@ -57,9 +57,10 @@ button {
   width: 10rem;
   margin-left: 5px;
   font-weight: bold;
+  border: transparent;
   background: var(--horizontal-gradient);
   background-size: 200% 100%;
-  background-position: left;
+  background-position: center;
   color: var(--dark);
   transition: var(--transition);
   cursor: pointer;
