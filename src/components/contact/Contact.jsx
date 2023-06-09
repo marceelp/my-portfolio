@@ -1,12 +1,15 @@
+import { usePage } from "../../contexts/PageContext";
 import { SiGmail, SiWhatsapp } from "react-icons/si";
 import ME from "../../assets/images/me.jpg";
 import "./contact.css";
 
-const Contact = ({ activeLink }) => {
+const Contact = () => {
+  const page = usePage();
+
   return (
     <section
       className={`contact--section ${
-        activeLink === "Kontakt" ? "visible" : "invisible"
+        page === "Kontakt" ? "visible" : "invisible"
       }`}
     >
       <img src={ME} alt="Das bin ich - Marcel Peda." />

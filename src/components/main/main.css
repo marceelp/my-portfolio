@@ -43,7 +43,7 @@
   left: 0;
   width: 90px;
   height: 1px;
-  background: var(--horizon-gradient);
+  background: var(--horizontal-gradient);
 }
 
 #menu > ul > li {
@@ -67,7 +67,7 @@
   position: absolute;
   bottom: -3px;
   background-color: var(--light);
-  background: var(--horizon-gradient);
+  background: var(--horizontal-gradient);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
@@ -91,7 +91,7 @@
 /* ----------------------------- */
 #line__top-horizontal,
 #line__bottom-horizontal {
-  background: var(--horizon-gradient);
+  background: var(--horizontal-gradient);
   position: absolute;
   width: 300px;
   height: 20px;

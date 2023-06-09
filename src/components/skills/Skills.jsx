@@ -1,10 +1,13 @@
+import { usePage } from "../../contexts/PageContext";
 import "./skills.css";
 
-const Skills = ({ activeLink }) => {
+const Skills = () => {
+  const page = usePage();
+
   return (
     <section
       className={`skills--section ${
-        activeLink === "Skills" ? "visible" : "invisible"
+        page === "Skills" ? "visible" : "invisible"
       }`}
     >
       <div>Skills</div>

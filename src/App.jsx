@@ -1,6 +1,4 @@
-import { useEffect, useState, createContext, useContext } from "react";
-import preloaderAnimation from "./animations/preloaderAnimation";
-
+import { PageProvider } from "./contexts/PageContext";
 import Preloader from "./components/preloader/Preloader";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/hero";
@@ -9,32 +7,18 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Main from "./components/main/Main";
 
-const PageContext = createContext();
-
 const App = () => {
-  const [activeLink, setActiveLink] = useState("Home");
-  // const page = useContext("Home");
-
-  const switchPage = (activeLinkName) => {
-    setActiveLink(activeLinkName);
-  };
-
-  useEffect(() => {
-    const timeout = setTimeout(() => preloaderAnimation(), 4000);
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <>
-      <PageContext.Provider value={activeLink}>
+      <PageProvider>
         <Preloader />
         <Header />
-        <Hero activeLink={activeLink} />
-        <Skills activeLink={activeLink} />
-        <Projects activeLink={activeLink} />
-        <Contact activeLink={activeLink} />
-        <Main activeLink={activeLink} switchPage={switchPage} />
-      </PageContext.Provider>
+        <Hero />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Main />
+      </PageProvider>
     </>
   );
 };

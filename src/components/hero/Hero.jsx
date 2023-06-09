@@ -1,27 +1,28 @@
+import { usePage } from "../../contexts/PageContext";
 import useTextAnimation from "../../animations/useTextAnimation";
 import "./hero.css";
 
-const Hero = ({ activeLink }) => {
+const Hero = () => {
+  const page = usePage();
   const heading = useTextAnimation("Willkommen.", 4200);
 
   return (
     <section
-      className={`hero--section ${
-        activeLink === "Home" ? "visible" : "invisible"
-      }`}
+      className={`hero--section ${page === "Home" ? "visible" : "invisible"}`}
     >
       <article className="hero--description">
         <h1>{heading}</h1>
         <p>
-          Mein Name ist Marcel Peda.
+          Mein Name ist <span>Marcel Peda</span>. Ich bin ein 26 Jahre alter,
+          leidenschaftlicher Full-Stack-Developer aus Hamburg.
           <br />
           <br />
-          Ich bin ein 26 Jahre junger, leidenschaftlicher Full-Stack-Developer
-          aus Hamburg, Deutschland.
+          Obwohl ich erst seit kurzem programmiere, greife ich bereits auf
+          umfangreiche Kenntnisse in HTML-, CSS- und JavaScript zurück.
           <br />
           <br />
-          Ich bin daran interessiert, moderne User Interfaces und intuitiv
-          gestaltete User Experiences zu erschaffen.
+          Mein Fokus und meine Stärke liegen auf modernen User Interfaces und
+          intuitiv gestalteten User Experiences.
         </p>
       </article>
     </section>

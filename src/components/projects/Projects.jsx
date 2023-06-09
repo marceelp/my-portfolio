@@ -1,11 +1,14 @@
+import { usePage } from "../../contexts/PageContext";
 import projects from "./projectdata";
 import "./projects.css";
 
-const Projects = ({ activeLink }) => {
+const Projects = () => {
+  const page = usePage();
+
   return (
     <section
       className={`projects--section ${
-        activeLink === "Projekte" ? "visible" : "invisible"
+        page === "Projekte" ? "visible" : "invisible"
       }`}
     >
       <ul className="projects--menu">

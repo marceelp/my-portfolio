@@ -75,7 +75,7 @@ button {
   width: 10rem;
   margin-left: 5px;
   font-weight: bold;
-  background: var(--horizon-gradient);
+  background: var(--horizontal-gradient);
   background-size: 200% 100%;
   background-position: left;
   color: var(--dark);
