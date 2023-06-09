@@ -13,12 +13,12 @@ const Hero = () => {
       <article className="hero--description">
         <h1>{heading}</h1>
         <p>
-          Mein Name ist <span>Marcel Peda</span>. Ich bin ein 26 Jahre alter,
+          Mein Name ist <span>Marcel Peda</span>. Ich bin ein 26 Jahre junger,
           leidenschaftlicher Full-Stack-Developer aus Hamburg.
           <br />
           <br />
-          Obwohl ich erst seit kurzem programmiere, greife ich bereits auf
-          umfangreiche Kenntnisse in HTML-, CSS- und JavaScript zurück.
+          Obwohl ich erst seit kurzem programmiere, kann ich bereits auf
+          umfangreiche Kenntnisse in HTML, CSS und JavaScript zurückgreifen.
           <br />
           <br />
           Mein Fokus und meine Stärke liegen auf modernen User Interfaces und

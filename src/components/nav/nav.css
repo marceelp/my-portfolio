@@ -1,4 +1,4 @@
-#main__section {
+.nav--section {
   position: absolute;
   top: 0;
   left: 0;
@@ -7,7 +7,7 @@
   max-width: 1920px;
 }
 
-#menu {
+.nav--menu {
   width: 16.5rem;
   height: 25rem;
   position: absolute;
@@ -16,18 +16,18 @@
   z-index: 3;
 }
 
-#menu > h3 {
+.nav--menu > h3 {
   position: absolute;
   top: 4rem;
   left: 1rem;
 }
 
-#menu > ul {
+.nav--menu > ul {
   padding: 3rem;
   position: absolute;
   bottom: -6rem;
 }
-#menu > ul::before {
+.nav--menu > ul::before {
   content: "";
   position: absolute;
   top: 0;
@@ -36,7 +36,7 @@
   height: 90px;
   background: var(--vertical-gradient);
 }
-#menu > ul::after {
+.nav--menu > ul::after {
   content: "";
   position: absolute;
   top: 0;
@@ -46,21 +46,18 @@
   background: var(--horizontal-gradient);
 }
 
-#menu > ul > li {
+.nav--menu > ul > li {
   width: fit-content;
   margin-bottom: 1.8rem;
   transition: var(--transition);
   position: relative;
   cursor: pointer;
 }
-#menu > ul > li:hover {
+.nav--menu > ul > li:hover {
   transform: scale(1.1);
 }
-#menu > ul > li.active {
-  color: var(--white);
-}
 
-#menu > ul > li::before {
+.nav--menu > ul > li::before {
   content: "";
   width: 100%;
   height: 1px;
@@ -72,15 +69,19 @@
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
-#menu > ul > li:hover::before {
+.nav--menu > ul > li:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.nav--link.active {
+  color: var(--white);
 }
 
 /* --------------------- */
 /* ----- Copyright ----- */
 /* --------------------- */
-#copyright {
+.copyright {
   position: absolute;
   bottom: 4rem;
   right: 10rem;
@@ -89,8 +90,8 @@
 /* ----------------------------- */
 /* --- HORIZONTAL DECORATION --- */
 /* ----------------------------- */
-#line__top-horizontal,
-#line__bottom-horizontal {
+.line--top-horizontal,
+.line--bottom-horizontal {
   background: var(--horizontal-gradient);
   position: absolute;
   width: 300px;
@@ -98,13 +99,13 @@
   opacity: 0.5;
 }
 
-#line__top-horizontal {
+.line--top-horizontal {
   top: 0;
   left: 4%;
   border-top-left-radius: 1rem;
 }
 
-#line__bottom-horizontal {
+.line--bottom-horizontal {
   bottom: 0;
   right: 4%;
   border-bottom-right-radius: 1rem;
@@ -113,8 +114,8 @@
 /* ------------------------------- */
 /* ----- VERTICAL DECORATION ----- */
 /* ------------------------------- */
-#line__top-vertical,
-#line__bottom-vertical {
+.line--top-vertical,
+.line--bottom-vertical {
   content: "";
   background: var(--vertical-gradient);
   position: absolute;
@@ -122,12 +123,12 @@
   height: 270px;
   opacity: 0.5;
 }
-#line__top-vertical {
+.line--top-vertical {
   top: 20px;
   left: 4%;
   width: 20px;
 }
-#line__bottom-vertical {
+.line--bottom-vertical {
   bottom: 20px;
   right: 4%;
 }
@@ -135,8 +136,8 @@
 /* ---------------------- */
 /* --- TOP LINE EDGES --- */
 /* ---------------------- */
-#line__top-horizontal::after,
-#line__top-vertical::after {
+.line--top-horizontal::after,
+.line--top-vertical::after {
   content: "";
   position: absolute;
   width: 2rem;
@@ -144,11 +145,11 @@
   transform: rotate(50deg);
   background-color: var(--dark);
 }
-#line__top-horizontal::after {
+.line--top-horizontal::after {
   top: 0;
   right: -1px;
 }
-#line__top-vertical::after {
+.line--top-vertical::after {
   bottom: -20px;
   right: -1px;
 }
@@ -156,8 +157,8 @@
 /* ------------------------- */
 /* --- BOTTOM LINE EDGES --- */
 /* ------------------------- */
-#line__bottom-horizontal::after,
-#line__bottom-vertical::after {
+.line--bottom-horizontal::after,
+.line--bottom-vertical::after {
   content: "";
   position: absolute;
   width: 2rem;
@@ -165,11 +166,11 @@
   transform: rotate(50deg);
   background-color: var(--dark);
 }
-#line__bottom-horizontal::after {
+.line--bottom-horizontal::after {
   top: -16px;
   left: -1px;
 }
-#line__bottom-vertical::after {
+.line--bottom-vertical::after {
   top: -28px;
   right: -1px;
 }

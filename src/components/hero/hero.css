@@ -3,9 +3,8 @@
 }
 
 .hero--description {
-  margin-top: -4rem;
   width: 60%;
-  margin-left: 12rem;
+  margin: -4rem 0 0 12rem;
 }
 
 .hero--description > h1 {
@@ -13,16 +12,18 @@
 }
 
 .hero--description > p {
-  padding-right: 8rem;
+  width: 50rem;
+  margin-left: 3rem;
   position: relative;
-  transform: translateX(2rem);
 }
+
 .hero--description > p::before {
   content: "";
   position: absolute;
+  top: 0;
   left: -3rem;
-  width: 1px;
   height: 100%;
+  width: 1px;
   background: var(--vertical-gradient);
 }
 
