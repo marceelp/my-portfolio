@@ -23,8 +23,8 @@ const Main = () => {
       <div className="nav--menu">
         <h3>{title}</h3>
         <ul>
-          {links.map((link, index) => (
-            <li key={index} onClick={() => pageSwitch(link.name)}>
+          {links.map((link, i) => (
+            <li key={i} onClick={() => pageSwitch(link.name)}>
               <Link
                 to={link.path}
                 className={`nav--link ${page === link.name ? "active" : ""}`}

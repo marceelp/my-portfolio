@@ -4,14 +4,19 @@
 }
 
 :root {
-  --transition: all 0.4s ease;
   --white: #ffffff;
   --light: #bebebe;
   --dark: #131313;
   --black: #000000;
-  --horizontal-gradient: linear-gradient(90deg, #ff4858 1.9%, #72f2eb 97.5%);
-  --vertical-gradient: linear-gradient(180deg, #ff4858 1.9%, #72f2eb 97.5%);
-  --text-gradient: -webkit-linear-gradient(20deg, #72f2eb 1.9%, #ff4858 97.5%);
+
+  --gradient-horizontal: linear-gradient(90deg, #ff4858 2%, #72f2eb 98%);
+  --gradient-vertical: linear-gradient(180deg, #ff4858 2%, #72f2eb 98%);
+  --gradient-text: -webkit-linear-gradient(20deg, #72f2eb 2%, #ff4858 98%);
+
+  --scale-xs: scale(1.1);
+  --scale-s: scale(1.2);
+  --scale-l: scale(1.4);
+  --transition: all 0.4s ease;
 }
 
 html {
@@ -28,11 +33,6 @@ html {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: var(--light);
-}
-
 body {
   max-width: 1920px;
   font-size: 1.6rem;
@@ -40,11 +40,6 @@ body {
   background-color: var(--dark);
   color: var(--light);
   overflow: hidden;
-  /* For Canvas Background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /*  */
 }
 
 section {
@@ -53,6 +48,10 @@ section {
   left: 19%;
   width: 60rem;
   z-index: 1;
+}
+
+a {
+  color: var(--light);
 }
 
 h1,
@@ -91,14 +90,12 @@ small {
 }
 
 .visible {
-  animation: fadeIn 2s ease-in forwards;
-  pointer-events: all;
+  animation: fadeIn 1s ease-in forwards;
   display: block;
 }
 
 .invisible {
   animation: fadeOut 1s ease-out forwards;
-  pointer-events: none;
   display: none;
 }
 

@@ -12,12 +12,12 @@
 }
 
 .contact--icon {
-  font-size: 2.4rem;
   margin-left: 3rem;
+  font-size: 2.4rem;
   transition: var(--transition);
 }
 .contact--icon:hover {
-  transform: scale(1.2);
+  transform: var(--scale-s);
   cursor: pointer;
 }
 
@@ -31,22 +31,22 @@
 
 form {
   width: 40rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
 }
 
 input,
 textarea,
 button {
   font-family: "System Code", monospace;
-  background-color: transparent;
-  border: 0.1px solid var(--light);
+  letter-spacing: 1px;
   padding: 1rem;
   margin-bottom: 1rem;
-  color: var(--light);
-  letter-spacing: 1px;
+  border: 0.1px solid var(--light);
   outline: none;
+  background-color: transparent;
+  color: var(--light);
 }
 
 textarea {
@@ -54,11 +54,11 @@ textarea {
 }
 
 button {
+  font-weight: bold;
   width: 10rem;
   margin-left: 5px;
-  font-weight: bold;
   border: transparent;
-  background: var(--horizontal-gradient);
+  background: var(--gradient-horizontal);
   background-size: 200% 100%;
   background-position: center;
   color: var(--dark);
@@ -68,5 +68,5 @@ button {
 
 button:hover {
   background-position: right;
-  transform: scale(1.1);
+  transform: var(--scale-xs);
 }

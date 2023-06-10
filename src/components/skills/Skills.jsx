@@ -21,11 +21,7 @@ const Skills = () => {
   useEffect(() => setAnimatedSkill(currentSkill), [currentSkill]);
 
   return (
-    <section
-      className={`skills--section ${
-        page === "Skills" ? "visible" : "invisible"
-      }`}
-    >
+    <section className={page === "Skills" ? "visible" : "invisible"}>
       <div className="skills--grid">
         {skills.map((skill, i) => (
           <div className="skills--skill" key={i}>

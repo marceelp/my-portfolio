@@ -1,18 +1,18 @@
 .nav--section {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   max-width: 1920px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .nav--menu {
   width: 16.5rem;
   height: 25rem;
   position: absolute;
-  right: 25rem;
   bottom: 22rem;
+  right: 25rem;
   z-index: 3;
 }
 
@@ -34,16 +34,16 @@
   left: 0;
   width: 1px;
   height: 90px;
-  background: var(--vertical-gradient);
+  background: var(--gradient-vertical);
 }
 .nav--menu > ul::after {
   content: "";
+  width: 90px;
+  height: 1px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 90px;
-  height: 1px;
-  background: var(--horizontal-gradient);
+  background: var(--gradient-horizontal);
 }
 
 .nav--menu > ul > li {
@@ -61,7 +61,7 @@
   position: absolute;
   bottom: -3px;
   background-color: var(--light);
-  background: var(--horizontal-gradient);
+  background: var(--gradient-horizontal);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
@@ -88,94 +88,93 @@
 /* --- HORIZONTAL LINES --- */
 /* ------------------------ */
 .line--top-horizontal {
-  position: absolute;
-  background: var(--horizontal-gradient);
   width: 300px;
   height: 20px;
-  opacity: 0.4;
+  position: absolute;
   top: 0;
   left: 4%;
   border-top-left-radius: 1rem;
+  background: var(--gradient-horizontal);
+  opacity: 0.4;
 }
 
 .line--bottom-horizontal {
-  position: absolute;
-  background: var(--horizontal-gradient);
   width: 300px;
   height: 20px;
-  opacity: 0.4;
+  position: absolute;
   bottom: 0;
   right: 4%;
   border-bottom-right-radius: 1rem;
+  background: var(--gradient-horizontal);
+  opacity: 0.4;
 }
 
 /* -------------------------- */
 /* ----- VERTICAL LINES ----- */
 /* -------------------------- */
 .line--top-vertical {
-  position: absolute;
-  background: var(--vertical-gradient);
   width: 20px;
   height: 270px;
-  opacity: 0.4;
+  position: absolute;
   top: 20px;
   left: 4%;
-  width: 20px;
+  background: var(--gradient-vertical);
+  opacity: 0.4;
 }
 
 .line--bottom-vertical {
-  position: absolute;
-  background: var(--vertical-gradient);
   width: 20px;
   height: 270px;
-  opacity: 0.4;
+  position: absolute;
   bottom: 20px;
   right: 4%;
+  background: var(--gradient-vertical);
+  opacity: 0.4;
 }
 
 /* -------------------------------- */
 /* --- OVERLAYS TO CREATE EDGES --- */
 /* -------------------------------- */
 .line--top-horizontal::after {
-  position: absolute;
   content: "";
   width: 2rem;
   height: 4rem;
-  transform: rotate(50deg);
-  background-color: var(--dark);
+  position: absolute;
   top: 0;
   right: -1px;
+  background-color: var(--dark);
+  transform: rotate(50deg);
 }
 
 .line--top-vertical::after {
-  position: absolute;
   content: "";
   width: 2rem;
   height: 4rem;
-  transform: rotate(50deg);
-  background-color: var(--dark);
+  position: absolute;
   bottom: -20px;
   right: -1px;
+  background-color: var(--dark);
+  transform: rotate(50deg);
 }
 
 .line--bottom-horizontal::after {
-  position: absolute;
   content: "";
   width: 2rem;
   height: 4rem;
-  transform: rotate(50deg);
-  background-color: var(--dark);
+  position: absolute;
   top: -16px;
   left: -1px;
+  background-color: var(--dark);
+  transform: rotate(50deg);
 }
 
 .line--bottom-vertical::after {
-  position: absolute;
   content: "";
   width: 2rem;
   height: 4rem;
-  transform: rotate(50deg);
-  background-color: var(--dark);
+  position: absolute;
   top: -28px;
   right: -1px;
+  background-color: var(--dark);
+  transform: rotate(50deg);
 }

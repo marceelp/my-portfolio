@@ -16,13 +16,13 @@
 }
 
 .projects--nums > p:hover {
-  transform: scale(1.5);
+  transform: var(--scale-l);
   cursor: pointer;
 }
 
 .project-title {
-  font-weight: 400;
   padding-left: 1rem;
+  font-weight: 400;
 }
 
 .project-details {
@@ -31,16 +31,16 @@
 
 .project-details::before {
   content: "";
+  height: 100%;
+  width: 1px;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 1px;
-  background: var(--vertical-gradient);
+  background: var(--gradient-vertical);
 }
 
 .project-description {
-  max-width: 50rem;
+  width: 50rem;
   margin: 2rem 0 2rem 3rem;
   line-height: 2.2rem;
 }
@@ -48,15 +48,15 @@
 .project-skills {
   margin: 0 2rem 0 3rem;
   color: white;
-  background: var(--text-gradient);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .project-link {
-  font-size: 1.3rem;
   padding-left: 2rem;
+  font-size: 1.3rem;
   transition: var(--transition);
 }
 
@@ -69,7 +69,7 @@
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
-  background: var(--horizontal-gradient);
+  background: var(--gradient-horizontal);
 }
 .project-link:hover::before {
   transform: scaleX(1);
@@ -83,4 +83,8 @@
 .project-link:hover {
   color: var(--white);
   cursor: pointer;
+}
+
+.active-page {
+  color: var(--white);
 }

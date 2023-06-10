@@ -1,7 +1,6 @@
 header {
   width: 100%;
   max-width: 1920px;
-  height: fit-content;
   padding: 5rem 10rem;
   position: fixed;
   top: 0;
@@ -17,7 +16,7 @@ header {
   transition: var(--transition);
 }
 .nav--logo:hover {
-  transform: scale(1.2);
+  transform: var(--scale-s);
 }
 
 .nav--icon {
@@ -26,7 +25,7 @@ header {
   transition: var(--transition);
 }
 .nav--icon:hover {
-  transform: scale(1.4);
+  transform: var(--scale-l);
   cursor: pointer;
 }
 

@@ -15,5 +15,5 @@
 }
 
 .skills--skill:hover {
-  transform: scale(1.4);
+  transform: var(--scale-l);
 }
