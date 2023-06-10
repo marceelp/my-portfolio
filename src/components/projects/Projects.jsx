@@ -54,11 +54,11 @@ const Projects = () => {
                 {i === selectedProject ? currentSkills : project.skills}
               </small>
 
-              <a href={project.github} className="project-link">
+              <a href={project.github} className="project-link" target="_blank">
                 Github
               </a>
 
-              <a href={project.live} className="project-link">
+              <a href={project.live} className="project-link" target="_blank">
                 Seite ansehen
               </a>
             </div>

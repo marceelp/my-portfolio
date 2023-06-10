@@ -20,7 +20,7 @@ export default [
     skills: "JavaScript / HTML Canvas",
     description:
       "Die Wiederauferstehung des Klassikers Pacman aus den guten alten Zeiten. Das Spiel habe ich mit HTML Canvas / WebGL und JavaScript entwickelt. Schaffst du es in die All-Time Top-5 und dich somit für immer im globalen Highscore zu verewigen?",
-    github: "",
-    live: "",
+    github: "https://github.com/marceelp/pacman",
+    live: "https://marceelp.github.io/pacman/",
   },
 ];
