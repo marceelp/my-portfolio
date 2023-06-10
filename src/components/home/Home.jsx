@@ -8,9 +8,7 @@ const Home = () => {
 
   return (
     <section
-      className={`home--section ${
-        page === "Home" || page === "" ? "visible" : "invisible"
-      }`}
+      className={`home--section ${page === "Home" ? "visible" : "invisible"}`}
     >
       <h1>{heading}</h1>
       <p>
@@ -19,7 +17,7 @@ const Home = () => {
         <br />
         <br />
         Ich besitze umfangreiche Kenntnisse in HTML, CSS und JavaScript,
-        besonders React.js und Node.js, und mein Fokus liegt auf modernen User
+        besonders React.js und Node.js. Mein Fokus liegt auf modernen User
         Interfaces und intuitiv gestalteten User Experiences.
       </p>
     </section>

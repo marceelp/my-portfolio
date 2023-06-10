@@ -17,7 +17,7 @@ header {
   transition: var(--transition);
 }
 .nav--logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .nav--icon {
@@ -26,18 +26,18 @@ header {
   transition: var(--transition);
 }
 .nav--icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
   cursor: pointer;
 }
 
 .nav--icon-one:hover {
-  color: #f1502f;
+  color: #ff0000;
 }
 
 .nav--icon-two:hover {
-  color: #c13584;
+  color: #f1502f;
 }
 
 .nav--icon-three:hover {
-  color: #ff0000;
+  color: #c13584;
 }

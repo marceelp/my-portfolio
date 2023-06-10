@@ -12,14 +12,14 @@ export const usePageSwitch = () => {
 };
 
 export const PageProvider = ({ children }) => {
-  const [activePage, setActivePage] = useState("Home");
+  const [page, setPage] = useState("Home");
 
   const switchPage = (currentPage) => {
-    setActivePage(currentPage);
+    setPage(currentPage);
   };
 
   return (
-    <PageContext.Provider value={activePage}>
+    <PageContext.Provider value={page}>
       <PageSwitchContext.Provider value={switchPage}>
         {children}
       </PageSwitchContext.Provider>

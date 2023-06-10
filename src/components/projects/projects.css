@@ -1,39 +1,63 @@
 .projects--section {
-  margin: 1rem 0 0 5rem;
+  margin-left: 4rem;
 }
 
-.projects--menu::before {
+.projects--nums {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -7rem;
+  top: 11rem;
+}
+
+.projects--nums > p {
+  margin-bottom: 3rem;
+  transition: var(--transition);
+}
+
+.projects--nums > p:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.project-title {
+  font-weight: 400;
+  padding-left: 1rem;
+}
+
+.project-details {
+  position: relative;
+}
+
+.project-details::before {
   content: "";
   position: absolute;
-  top: 1rem;
-  left: -3rem;
-  height: calc(100% - 1rem);
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 1px;
   background: var(--vertical-gradient);
 }
 
-.project-title {
-  margin-bottom: 1rem;
+.project-description {
+  max-width: 50rem;
+  margin: 2rem 0 2rem 3rem;
+  line-height: 2.2rem;
 }
 
 .project-skills {
+  margin: 0 2rem 0 3rem;
+  color: white;
   background: var(--text-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.project-description {
-  max-width: 50rem;
-  margin: 2rem 0;
-  line-height: 2rem;
-}
-
 .project-link {
   font-size: 1.3rem;
-  margin-right: 2rem;
+  padding-left: 2rem;
   transition: var(--transition);
-  color: var(--light);
 }
 
 .project-link::before {
@@ -57,7 +81,6 @@
 }
 
 .project-link:hover {
-  transform: scale(1.1);
   color: var(--white);
   cursor: pointer;
 }

@@ -16,10 +16,10 @@ const App = () => {
       <Preloader />
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projekte" element={<Projects />} />
-        <Route path="/kontakt" element={<Contact />} />
+        <Route path="/my-portfolio" element={<Home />} />
+        <Route path="/my-portfolio/skills" element={<Skills />} />
+        <Route path="/my-portfolio/projekte" element={<Projects />} />
+        <Route path="/my-portfolio/kontakt" element={<Contact />} />
       </Routes>
       <Nav />
       <CanvasBackground />

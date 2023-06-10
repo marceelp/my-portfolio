@@ -1,6 +1,6 @@
 export default [
-  { name: "Home", path: "" },
-  { name: "Skills", path: "/skills" },
-  { name: "Projekte", path: "/projekte" },
-  { name: "Kontakt", path: "/kontakt" },
+  { name: "Home", path: "/my-portfolio" },
+  { name: "Skills", path: "/my-portfolio/skills" },
+  { name: "Projekte", path: "/my-portfolio/projekte" },
+  { name: "Kontakt", path: "/my-portfolio/kontakt" },
 ];

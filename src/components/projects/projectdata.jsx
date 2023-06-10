@@ -1,26 +1,26 @@
 export default [
   {
-    title: "TheSocial",
+    title: "SocialApp",
     skills: "React / Node / Tailwind",
     description:
-      "Eine Plattform, auf der die Nutzer eigene Kreationen teilen und sich miteinander vernetzen können. Das Projekt habe ich mit React.js, Node.js und Tailwind CSS erstellt.",
+      "Ein soziales Netzwerk, in dem sich die Nutzer miteinander connecten können. Für das Projekt habe ich React.js, Node.js und Tailwind CSS verwendet. Es handelt sich um eine Demo-Version, erstellte Accounts werden nach 24h automatisch gelöscht.",
     github: "",
     live: "",
   },
-  // {
-  //   title: "Lyriks",
-  //   skills: "React / Node / Tailwind",
-  //   description:
-  //     "Lyriks ist eine App für Musik, Podcasts und Videos, mit der man Zugriff auf Millionen Songs und andere ähnliche Inhalte aus der ganzen Welt hat.",
-  //   github: "",
-  //   live: "",
-  // },
-  // {
-  //   title: "Pacman Game",
-  //   skills: "JavaScript / WebGL",
-  //   description:
-  //     "Meine eigene Version des Klassikers Pacman. Schafft man es in die All-time-Top-5, wird der Spielstand im Highscore gespeichert.",
-  //   github: "",
-  //   live: "",
-  // },
+  {
+    title: "Lyriks",
+    skills: "React / Node / Tailwind",
+    description:
+      "Lyriks ist eine Musik- und Podcast-App, die einem den Zugriff auf über 5 Millionen Songs und ähnliche Inhalte aus der ganzen Welt ermöglicht. Die App habe ich genau wie die Socialmedia-App mit React.js, Node.js und Tailwind CSS erstellt.",
+    github: "",
+    live: "",
+  },
+  {
+    title: "Pacman Game",
+    skills: "JavaScript / HTML Canvas",
+    description:
+      "Die Wiederauferstehung des Klassikers Pacman aus den guten alten Zeiten. Das Spiel habe ich mit HTML Canvas / WebGL und JavaScript entwickelt. Schaffst du es in die All-Time Top-5 und dich somit für immer im globalen Highscore zu verewigen?",
+    github: "",
+    live: "",
+  },
 ];

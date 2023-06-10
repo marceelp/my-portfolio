@@ -53,9 +53,6 @@
   position: relative;
   cursor: pointer;
 }
-.nav--menu > ul > li:hover {
-  transform: scale(1.1);
-}
 
 .nav--menu > ul > li::before {
   content: "";
@@ -87,90 +84,98 @@
   right: 10rem;
 }
 
-/* ----------------------------- */
-/* --- HORIZONTAL DECORATION --- */
-/* ----------------------------- */
-.line--top-horizontal,
-.line--bottom-horizontal {
-  background: var(--horizontal-gradient);
+/* ------------------------ */
+/* --- HORIZONTAL LINES --- */
+/* ------------------------ */
+.line--top-horizontal {
   position: absolute;
+  background: var(--horizontal-gradient);
   width: 300px;
   height: 20px;
-  opacity: 0.5;
-}
-
-.line--top-horizontal {
+  opacity: 0.4;
   top: 0;
   left: 4%;
   border-top-left-radius: 1rem;
 }
 
 .line--bottom-horizontal {
+  position: absolute;
+  background: var(--horizontal-gradient);
+  width: 300px;
+  height: 20px;
+  opacity: 0.4;
   bottom: 0;
   right: 4%;
   border-bottom-right-radius: 1rem;
 }
 
-/* ------------------------------- */
-/* ----- VERTICAL DECORATION ----- */
-/* ------------------------------- */
-.line--top-vertical,
-.line--bottom-vertical {
-  content: "";
-  background: var(--vertical-gradient);
+/* -------------------------- */
+/* ----- VERTICAL LINES ----- */
+/* -------------------------- */
+.line--top-vertical {
   position: absolute;
+  background: var(--vertical-gradient);
   width: 20px;
   height: 270px;
-  opacity: 0.5;
-}
-.line--top-vertical {
+  opacity: 0.4;
   top: 20px;
   left: 4%;
   width: 20px;
 }
+
 .line--bottom-vertical {
+  position: absolute;
+  background: var(--vertical-gradient);
+  width: 20px;
+  height: 270px;
+  opacity: 0.4;
   bottom: 20px;
   right: 4%;
 }
 
-/* ---------------------- */
-/* --- TOP LINE EDGES --- */
-/* ---------------------- */
-.line--top-horizontal::after,
-.line--top-vertical::after {
-  content: "";
+/* -------------------------------- */
+/* --- OVERLAYS TO CREATE EDGES --- */
+/* -------------------------------- */
+.line--top-horizontal::after {
   position: absolute;
+  content: "";
   width: 2rem;
   height: 4rem;
   transform: rotate(50deg);
   background-color: var(--dark);
-}
-.line--top-horizontal::after {
   top: 0;
   right: -1px;
 }
+
 .line--top-vertical::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 4rem;
+  transform: rotate(50deg);
+  background-color: var(--dark);
   bottom: -20px;
   right: -1px;
 }
 
-/* ------------------------- */
-/* --- BOTTOM LINE EDGES --- */
-/* ------------------------- */
-.line--bottom-horizontal::after,
-.line--bottom-vertical::after {
-  content: "";
+.line--bottom-horizontal::after {
   position: absolute;
+  content: "";
   width: 2rem;
   height: 4rem;
   transform: rotate(50deg);
   background-color: var(--dark);
-}
-.line--bottom-horizontal::after {
   top: -16px;
   left: -1px;
 }
+
 .line--bottom-vertical::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 4rem;
+  transform: rotate(50deg);
+  background-color: var(--dark);
   top: -28px;
   right: -1px;
 }

@@ -7,8 +7,8 @@ export default [
   "React.js",
   "Node.js",
   "Express.js",
-  "HTTP",
-  "API",
-  "Networking",
+  "Fetch API",
   "Shell Script",
+  "Networking",
+  "HTTP",
 ];

@@ -9,7 +9,7 @@ class CanvasBackground extends Component {
 
     const mouse = { x: undefined, y: undefined };
     const colors = ["#FF4858", "#1B7F79", "#00CCC0", "#72F2EB"];
-    const circles = [];
+    let circles = [];
 
     const randomIntFromRange = (min, max) => {
       return Math.floor(Math.random() * (max - min + 1) + min);
@@ -19,8 +19,8 @@ class CanvasBackground extends Component {
       constructor() {
         this.x = mouse.x;
         this.y = mouse.y;
-        this.radius = randomIntFromRange(5, 10);
-        this.color = colors[Math.floor(Math.random() * 4)];
+        this.radius = 6;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
         this.speed = {
           x: randomIntFromRange(-2, 2),
           y: randomIntFromRange(-2, 2),
@@ -28,11 +28,10 @@ class CanvasBackground extends Component {
       }
 
       draw() {
-        c.beginPath();
-        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        const path = new Path2D();
+        path.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.strokeStyle = this.color;
-        c.stroke();
-        c.closePath();
+        c.stroke(path);
       }
 
       update() {
@@ -41,7 +40,7 @@ class CanvasBackground extends Component {
         this.x += this.speed.x;
         this.y += this.speed.y;
 
-        if (this.radius > 0.2) this.radius -= 0.07;
+        if (this.radius > 2) this.radius -= 0.08;
       }
     }
 
@@ -54,8 +53,7 @@ class CanvasBackground extends Component {
 
     const animate = () => {
       requestAnimationFrame(animate);
-      c.fillStyle = "#131313";
-      c.fillRect(0, 0, canvas.width, canvas.height);
+      c.clearRect(0, 0, canvas.width, canvas.height);
 
       circles.forEach((circle, i) => {
         circle.update();
@@ -66,13 +64,12 @@ class CanvasBackground extends Component {
           const distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
 
           if (distance < 100) {
-            c.beginPath();
-            c.moveTo(circle.x, circle.y);
-            c.lineTo(otherCircle.x, otherCircle.y);
-            c.lineWidth = 0.1;
+            const path = new Path2D();
+            path.moveTo(circle.x, circle.y);
+            path.lineTo(otherCircle.x, otherCircle.y);
+            c.lineWidth = 0.2;
             c.strokeStyle = circle.color;
-            c.stroke();
-            c.closePath();
+            c.stroke(path);
           }
         });
 
