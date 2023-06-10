@@ -13,7 +13,7 @@ const Projects = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedProject((prevProject) => (prevProject + 1) % projects.length);
-    }, 12000);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, []);
