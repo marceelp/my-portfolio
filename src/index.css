@@ -155,6 +155,7 @@ small {
   }
 
   .wrapper {
+    position: relative;
     flex-direction: column;
     height: 120vh;
     /* background-color: red; */
