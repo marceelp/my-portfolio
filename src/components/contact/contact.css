@@ -1,5 +1,5 @@
 .contact--section {
-  margin: -3.8rem 0 0 6rem;
+  padding-left: 5rem;
 }
 
 .contact--section > img {
@@ -30,7 +30,7 @@
 }
 
 form {
-  width: 40rem;
+  width: 35rem;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;

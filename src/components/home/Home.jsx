@@ -17,8 +17,8 @@ const Home = () => {
         <br />
         <br />
         Ich besitze umfangreiche Kenntnisse in HTML, CSS und JavaScript,
-        besonders React.js und Node.js. Mein Fokus liegt auf modernen User
-        Interfaces und intuitiv gestalteten User Experiences.
+        besonders React.js. Mein Fokus liegt auf modernen User Interfaces und
+        intuitiv gestalteten User Experiences.
       </p>
     </section>
   );

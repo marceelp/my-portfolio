@@ -40,3 +40,13 @@ header {
 .nav--icon-three:hover {
   color: #c13584;
 }
+
+@media (max-width: 1400px) {
+  header {
+    padding: 5rem;
+  }
+
+  .nav--logo {
+    width: 4rem;
+  }
+}

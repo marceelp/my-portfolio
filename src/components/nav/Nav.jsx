@@ -17,28 +17,20 @@ const Main = () => {
 
   return (
     <main className="nav--section">
-      <div className="line--top-horizontal"></div>
-      <div className="line--top-vertical"></div>
-
-      <div className="nav--menu">
-        <h3>{title}</h3>
-        <ul>
-          {links.map((link, i) => (
-            <li key={i} onClick={() => pageSwitch(link.name)}>
-              <Link
-                to={link.path}
-                className={`nav--link ${page === link.name ? "active" : ""}`}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="line--bottom-horizontal"></div>
-      <div className="line--bottom-vertical"></div>
-
+      <h3>{title}</h3>
+      <ul className="nav--menu">
+        {links.map((link, i) => (
+          <li
+            onClick={() => pageSwitch(link.name)}
+            className="nav--link"
+            key={i}
+          >
+            <Link to={link.path} className={page === link.name ? "active" : ""}>
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
       <small className="copyright">&copy;{footer}</small>
     </main>
   );

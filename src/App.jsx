@@ -8,21 +8,25 @@ import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Nav from "./components/nav/Nav";
+import Frame from "./components/frame/Frame";
 import CanvasBackground from "./components/canvas/Canvas";
 
 const App = () => {
   return (
     <PageProvider>
-      <Preloader />
-      <Header />
-      <Routes>
-        <Route path="/my-portfolio" element={<Home />} />
-        <Route path="/my-portfolio/skills" element={<Skills />} />
-        <Route path="/my-portfolio/projekte" element={<Projects />} />
-        <Route path="/my-portfolio/kontakt" element={<Contact />} />
-      </Routes>
-      <Nav />
-      <CanvasBackground />
+      <div className="wrapper">
+        <Preloader />
+        <Header />
+        <Routes>
+          <Route path="/my-portfolio" element={<Home />} />
+          <Route path="/my-portfolio/skills" element={<Skills />} />
+          <Route path="/my-portfolio/projekte" element={<Projects />} />
+          <Route path="/my-portfolio/kontakt" element={<Contact />} />
+        </Routes>
+        <Nav />
+        <Frame />
+        {/* <CanvasBackground /> */}
+      </div>
     </PageProvider>
   );
 };

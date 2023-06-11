@@ -16,6 +16,7 @@
   --scale-xs: scale(1.1);
   --scale-s: scale(1.2);
   --scale-l: scale(1.4);
+
   --transition: all 0.4s ease;
 }
 
@@ -35,6 +36,7 @@ html {
 
 body {
   max-width: 1920px;
+  min-height: 100vh;
   font-size: 1.6rem;
   letter-spacing: 2px;
   background-color: var(--dark);
@@ -43,9 +45,6 @@ body {
 }
 
 section {
-  position: absolute;
-  top: 32%;
-  left: 19%;
   width: 60rem;
   z-index: 1;
 }
@@ -69,15 +68,11 @@ h1 {
 }
 
 h2 {
-  font-size: 7rem;
+  font-size: 6.6rem;
 }
 
 h3 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-size: 2.4rem;
+  font-size: 3.4rem;
 }
 
 p {
@@ -87,6 +82,13 @@ p {
 
 small {
   font-size: 1.3rem;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .visible {
@@ -114,5 +116,48 @@ small {
   }
   to {
     opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  section {
+    transform: scale(0.9);
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: inherit;
+    text-align: center;
+  }
+
+  section {
+    /* height: 100%; */
+    padding-top: 20rem;
+    width: 80vw;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 3.4rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    height: 120vh;
+    background-color: red;
   }
 }

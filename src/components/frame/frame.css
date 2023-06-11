@@ -1,0 +1,105 @@
+.top-horizontal {
+  width: 300px;
+  height: 20px;
+  position: fixed;
+  top: 0;
+  left: 4%;
+  border-top-left-radius: 1rem;
+  background: var(--gradient-horizontal);
+  opacity: 0.4;
+}
+
+.bottom-horizontal {
+  width: 300px;
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 4%;
+  border-bottom-right-radius: 1rem;
+  background: var(--gradient-horizontal);
+  opacity: 0.4;
+}
+
+.top-vertical {
+  width: 20px;
+  height: 270px;
+  position: fixed;
+  top: 20px;
+  left: 4%;
+  background: var(--gradient-vertical);
+  opacity: 0.4;
+}
+
+.bottom-vertical {
+  width: 20px;
+  height: 270px;
+  position: fixed;
+  bottom: 20px;
+  right: 4%;
+  background: var(--gradient-vertical);
+  opacity: 0.4;
+}
+
+/* -------------------------- */
+/* ----- OVERLAY - EDGES ----- */
+/* -------------------------- */
+
+.top-horizontal::after {
+  content: "";
+  width: 2rem;
+  height: 4rem;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  background-color: var(--dark);
+  transform: rotate(50deg);
+}
+
+.top-vertical::after {
+  content: "";
+  width: 2rem;
+  height: 4rem;
+  position: absolute;
+  bottom: -20px;
+  right: -1px;
+  background-color: var(--dark);
+  transform: rotate(50deg);
+}
+
+.bottom-horizontal::after {
+  content: "";
+  width: 2rem;
+  height: 4rem;
+  position: absolute;
+  top: -16px;
+  left: -1px;
+  background-color: var(--dark);
+  transform: rotate(50deg);
+}
+
+.bottom-vertical::after {
+  content: "";
+  width: 2rem;
+  height: 4rem;
+  position: absolute;
+  top: -28px;
+  right: -1px;
+  background-color: var(--dark);
+  transform: rotate(50deg);
+}
+
+/* ----------------------- */
+/* ----- MEDIA QUERIES ----- */
+/* ----------------------- */
+
+@media (max-width: 1400px) {
+  .top-horizontal,
+  .top-vertical {
+    left: 0;
+  }
+
+  .bottom-horizontal,
+  .bottom-vertical {
+    right: 0;
+  }
+}
