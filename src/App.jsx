@@ -25,7 +25,7 @@ const App = () => {
         </Routes>
         <Nav />
         <Frame />
-        <CanvasBackground />
+        {/* <CanvasBackground /> */}
       </div>
     </PageProvider>
   );
