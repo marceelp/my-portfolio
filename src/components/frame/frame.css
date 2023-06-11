@@ -13,7 +13,7 @@
   width: 300px;
   height: 20px;
   position: fixed;
-  bottom: -20px;
+  bottom: 0;
   right: 4%;
   border-bottom-right-radius: 1rem;
   background: var(--gradient-horizontal);
@@ -34,16 +34,14 @@
   width: 20px;
   height: 270px;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   right: 4%;
   background: var(--gradient-vertical);
   opacity: 0.4;
 }
 
-/* -------------------------- */
-/* ----- OVERLAY - EDGES ----- */
-/* -------------------------- */
-
+/* -------- OVERLAY EDGES -------- */
+/* ******************************* */
 .top-horizontal::after {
   content: "";
   width: 2rem;
@@ -88,10 +86,8 @@
   transform: rotate(50deg);
 }
 
-/* ----------------------- */
-/* ----- MEDIA QUERIES ----- */
-/* ----------------------- */
-
+/* -------- MEDIA QUERIES -------- */
+/* ******************************* */
 @media (max-width: 1400px) {
   .top-horizontal,
   .top-vertical {

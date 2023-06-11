@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./canvas.css";
 
 class CanvasBackground extends Component {
   componentDidMount() {

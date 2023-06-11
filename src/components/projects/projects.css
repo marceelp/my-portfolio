@@ -58,12 +58,13 @@
   padding-left: 2rem;
   font-size: 1.3rem;
   transition: var(--transition);
+  position: relative;
 }
 
 .project-link::before {
   content: "";
-  width: 4.6rem;
   height: 1px;
+  width: 4.6rem;
   position: absolute;
   bottom: -3px;
   transform: scaleX(0);
@@ -87,4 +88,36 @@
 
 .active-page {
   color: var(--white);
+}
+
+/* -------- MEDIA QUERIES -------- */
+/* ******************************* */
+@media (max-width: 768px) {
+  .projects--nums {
+    position: fixed;
+    top: 30rem;
+    left: -1rem;
+  }
+
+  .project-title {
+    margin-bottom: 2rem;
+  }
+
+  .project-description {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .project-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-skills {
+    margin-bottom: 1rem;
+  }
+
+  .project-link {
+    padding: 2rem 0 0 3rem;
+  }
 }

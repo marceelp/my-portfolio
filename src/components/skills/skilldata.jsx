@@ -8,7 +8,7 @@ export default [
   "Node.js",
   "Express.js",
   "Fetch API",
-  "Shell Script",
-  "Networking",
   "HTTP",
+  "Networking",
+  "Shell Script",
 ];

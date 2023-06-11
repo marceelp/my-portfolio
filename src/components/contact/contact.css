@@ -70,3 +70,15 @@ button:hover {
   background-position: right;
   transform: var(--scale-xs);
 }
+
+/* -------- MEDIA QUERIES -------- */
+/* ******************************* */
+@media (max-width: 768px) {
+  .contact--section {
+    padding-left: 2rem;
+  }
+
+  form {
+    width: 100%;
+  }
+}

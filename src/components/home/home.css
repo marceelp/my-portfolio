@@ -23,4 +23,7 @@
 }
 
 @media (max-width: 768px) {
+  .home--section > h1 {
+    margin-bottom: 3rem;
+  }
 }

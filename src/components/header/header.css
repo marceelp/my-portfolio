@@ -41,6 +41,8 @@ header {
   color: #c13584;
 }
 
+/* -------- MEDIA QUERIES -------- */
+/* ******************************* */
 @media (max-width: 1400px) {
   header {
     padding: 5rem;

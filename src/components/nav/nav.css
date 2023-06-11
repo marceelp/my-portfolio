@@ -1,3 +1,7 @@
+.nav--section {
+  z-index: 999;
+}
+
 .nav--section > h3 {
   margin: 5rem 0 2.6rem;
 }
@@ -62,6 +66,8 @@
   right: 10rem;
 }
 
+/* -------- MEDIA QUERIES -------- */
+/* ******************************* */
 @media (max-width: 1400px) {
   .copyright {
     right: 5rem;
@@ -74,19 +80,36 @@
   }
 }
 
+@media (max-width: 900px) {
+  .nav--section {
+    transform: scale(0.9);
+  }
+}
+
 @media (max-width: 768px) {
   .nav--section {
     width: 100vw;
-    height: 20vh;
-    padding-bottom: 5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scale(1);
   }
 
-  .nav--section > h3 {
+  .nav--section > h3,
+  .nav--menu::before,
+  .nav--menu::after {
     display: none;
   }
 
+  .nav--menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+
   .copyright {
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0.8rem;
+    right: inherit;
+    left: 5rem;
   }
 }

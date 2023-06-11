@@ -1,5 +1,4 @@
 .skills--grid {
-  width: 60rem;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(3, 1fr);
@@ -16,4 +15,16 @@
 
 .skills--skill:hover {
   transform: var(--scale-l);
+}
+
+/* -------- MEDIA QUERIES -------- */
+/* ******************************* */
+@media (max-width: 768px) {
+  .skills--grid {
+    margin-top: 0;
+  }
+
+  .skills--skill {
+    padding: 2.8rem 0.2rem;
+  }
 }
