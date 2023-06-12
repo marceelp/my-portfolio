@@ -1,20 +1,8 @@
-.mobile--nav {
-  position: fixed;
-  width: 100vw;
-  height: 60vh;
-  margin: auto 0;
-  z-index: 998;
-}
-
 .menu-btn {
   width: 30px;
   height: 30px;
-  position: fixed;
-  top: -8.3rem;
-  right: calc(-85vw);
-  cursor: pointer;
-  z-index: 999;
   position: relative;
+  cursor: pointer;
 }
 
 .line-top,
@@ -40,20 +28,20 @@
   bottom: 0;
 }
 
-.menu-button.active .line-top {
+.menu-btn.active .line-top {
   width: 100%;
   top: 12px;
-  left: 0;
+  right: 0;
   transform: translateY(6px) rotate(-45deg);
 }
 
-.menu-button.active .line-center {
+.menu-btn.active .line-center {
   opacity: 0;
 }
 
-.menu-button.active .line-bottom {
+.menu-btn.active .line-bottom {
   width: 100%;
   bottom: 12px;
-  left: 0;
+  right: 0;
   transform: translateY(-6px) rotate(45deg);
 }

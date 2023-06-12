@@ -10,34 +10,40 @@ header {
   z-index: 3;
 }
 
-.nav--logo {
+.header--logo {
   width: 4.6rem;
   transition: var(--transition);
 }
 
-.nav--logo:hover {
+.header--logo:hover {
   transform: var(--scale-s);
 }
 
-.nav--icon {
+.header--icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header--icon {
   font-size: 2.4rem;
   margin-left: 3rem;
   transition: var(--transition);
 }
-.nav--icon:hover {
+.header--icon:hover {
   transform: var(--scale-l);
   cursor: pointer;
 }
 
-.nav--icon-one:hover {
+.header--icon.one:hover {
   color: #ff0000;
 }
 
-.nav--icon-two:hover {
+.header--icon.two:hover {
   color: #f1502f;
 }
 
-.nav--icon-three:hover {
+.header--icon.three:hover {
   color: #405de6;
 }
 
@@ -45,20 +51,25 @@ header {
 /* ******************************* */
 @media (max-width: 768px) {
   header {
-    padding: 2rem;
+    padding: 2rem 3rem 2rem 2rem;
   }
 
-  .nav--logo {
+  .header--logo {
     padding-top: 1rem;
     margin-left: 1rem;
     width: 4rem;
   }
 
-  .nav--icon {
+  .header--icons {
+    padding-top: 1rem;
+  }
+
+  .header--icon {
     margin-left: 2rem;
   }
 
-  .nav--icon-two {
-    margin: 0.4rem 6rem 0 0;
+  .header--icon.two {
+    margin-right: 4rem;
+    font-size: 3rem;
   }
 }
