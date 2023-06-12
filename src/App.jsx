@@ -14,7 +14,7 @@ import CanvasBackground from "./components/canvas/Canvas";
 const App = () => {
   return (
     <PageProvider>
-      <div className="wrapper">
+      <main className="wrapper">
         <Preloader />
         <Header />
         <Routes>
@@ -25,8 +25,8 @@ const App = () => {
         </Routes>
         <Nav />
         <Frame />
-        <CanvasBackground />
-      </div>
+        {/* <CanvasBackground /> */}
+      </main>
     </PageProvider>
   );
 };

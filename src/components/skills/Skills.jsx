@@ -25,7 +25,7 @@ const Skills = () => {
       <div className="skills--grid">
         {skills.map((skill, i) => (
           <div className="skills--skill" key={i}>
-            {skill === currentSkill ? animatedSkill : skill}
+            <p>{skill === currentSkill ? animatedSkill : skill}</p>
           </div>
         ))}
       </div>

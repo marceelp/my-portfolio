@@ -8,7 +8,7 @@
 .skills--skill {
   width: fit-content;
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   transition: var(--transition);
   cursor: default;
 }
@@ -19,12 +19,12 @@
 
 /* -------- MEDIA QUERIES -------- */
 /* ******************************* */
-@media (max-width: 768px) {
+@media (max-width: 420px) {
   .skills--grid {
-    margin-top: 0;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .skills--skill {
-    padding: 2.8rem 0.2rem;
+    padding: 1rem;
   }
 }

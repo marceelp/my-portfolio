@@ -1,8 +1,7 @@
 header {
   width: 100%;
-  max-width: 1920px;
-  padding: 5rem 10rem;
-  position: fixed;
+  padding: 5rem;
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
@@ -12,9 +11,10 @@ header {
 }
 
 .nav--logo {
-  width: 5rem;
+  width: 4.6rem;
   transition: var(--transition);
 }
+
 .nav--logo:hover {
   transform: var(--scale-s);
 }
@@ -43,12 +43,21 @@ header {
 
 /* -------- MEDIA QUERIES -------- */
 /* ******************************* */
-@media (max-width: 1400px) {
+@media (max-width: 768px) {
   header {
-    padding: 5rem;
+    padding: 2rem;
   }
 
   .nav--logo {
+    padding-top: 1rem;
+    margin-left: 1rem;
     width: 4rem;
   }
+
+  .nav--icon {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 380px) {
 }

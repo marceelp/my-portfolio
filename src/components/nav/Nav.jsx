@@ -5,18 +5,17 @@ import useTextAnimation from "../../animations/useTextAnimation";
 import links from "./links";
 import "./nav.css";
 
-const Main = () => {
+const Nav = () => {
   const page = usePage();
   const pageSwitch = usePageSwitch();
   const [title, updateTitle] = useTextAnimation(page);
-  const [footer] = useTextAnimation("2023 Marcel Peda.", 4200);
 
   useEffect(() => {
     updateTitle(page);
   }, [page]);
 
   return (
-    <main className="nav--section">
+    <nav className="nav--section">
       <h3>{title}</h3>
       <ul className="nav--menu">
         {links.map((link, i) => (
@@ -31,9 +30,8 @@ const Main = () => {
           </li>
         ))}
       </ul>
-      <small className="copyright">&copy;{footer}</small>
-    </main>
+    </nav>
   );
 };
 
-export default Main;
+export default Nav;

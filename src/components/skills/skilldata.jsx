@@ -10,5 +10,5 @@ export default [
   "Fetch API",
   "HTTP",
   "Networking",
-  "Shell Script",
+  "Shellscript",
 ];

@@ -31,13 +31,13 @@ const Projects = () => {
     >
       <div className="projects--nums">
         {projects.map((project, i) => (
-          <p
+          <small
             key={i}
             onClick={() => setSelectedProject(i)}
             className={selectedProject === i ? "active-page" : ""}
           >
             {i + 1}
-          </p>
+          </small>
         ))}
       </div>
       <ul className="projects--menu">

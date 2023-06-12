@@ -30,7 +30,7 @@
 }
 
 form {
-  width: 35rem;
+  max-width: 40rem;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -73,12 +73,11 @@ button:hover {
 
 /* -------- MEDIA QUERIES -------- */
 /* ******************************* */
-@media (max-width: 768px) {
-  .contact--section {
-    padding-left: 2rem;
-  }
-
+@media (max-width: 920px) {
   form {
-    width: 100%;
+    max-width: 80%;
   }
+}
+
+@media (max-width: 420px) {
 }
