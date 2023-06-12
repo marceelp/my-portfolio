@@ -1,5 +1,6 @@
 import { usePageSwitch } from "../../contexts/PageContext";
-import { Link, useState } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import links from "../nav/links";
 import "./mobileNav.css";
 
