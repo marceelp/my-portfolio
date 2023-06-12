@@ -45,12 +45,28 @@ class CanvasBackground extends Component {
       }
     }
 
-    addEventListener("mousemove", (e) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
+    if ("ontouchstart" in window || navigator.maxTouchPoints) {
+      const touchStartHandler = (e) => {
+        e.preventDefault();
+        const touch = e.touches[0];
 
-      circles.push(new Circle());
-    });
+        mouse.x = touch.clientX;
+        mouse.y = touch.clientY;
+
+        for (let i = 0; i < 10; i++) {
+          circles.push(new Circle());
+        }
+      };
+
+      this.canvas.addEventListener("touchstart", touchStartHandler);
+    } else {
+      addEventListener("mousemove", (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+
+        circles.push(new Circle());
+      });
+    }
 
     const animate = () => {
       requestAnimationFrame(animate);

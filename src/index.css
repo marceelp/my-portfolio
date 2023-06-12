@@ -137,6 +137,10 @@ a {
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow: inherit;
+  }
+
   h1 {
     font-size: 5rem;
   }

@@ -126,3 +126,16 @@
     left: 2rem;
   }
 }
+
+@media (max-width: 420px) {
+  .bottom-horizontal,
+  .bottom-vertical {
+    display: none;
+  }
+
+  .copyright {
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
