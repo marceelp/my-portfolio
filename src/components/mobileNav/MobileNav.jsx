@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { usePageSwitch } from "../../contexts/PageContext";
+import { Link, useState } from "react";
 import links from "../nav/links";
 import "./mobileNav.css";
 
@@ -23,7 +24,7 @@ const MobileNav = () => {
       <ul className="mobile--menu">
         {links.map((link, i) => (
           <li
-            onClick={() => pageSwitch(link.name)}
+            onClick={() => usePageSwitch(link.name)}
             className="nav--link"
             key={i}
           >
