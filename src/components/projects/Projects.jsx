@@ -40,6 +40,7 @@ const Projects = () => {
           </small>
         ))}
       </div>
+
       <ul className="projects--menu">
         {projects.map((project, i) => (
           <li

@@ -13,7 +13,7 @@ const Skills = () => {
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * skills.length);
       setCurrentSkill(skills[randomIndex]);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -25,7 +25,9 @@ const Skills = () => {
       <div className="skills--grid">
         {skills.map((skill, i) => (
           <div className="skills--skill" key={i}>
-            <p>{skill === currentSkill ? animatedSkill : skill}</p>
+            <p className={skill === currentSkill ? "skills--current" : ""}>
+              {skill === currentSkill ? animatedSkill : skill}
+            </p>
           </div>
         ))}
       </div>

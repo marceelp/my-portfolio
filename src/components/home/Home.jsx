@@ -13,7 +13,7 @@ const Home = () => {
       <h1>{heading}</h1>
       <p>
         Mein Name ist <span>Marcel Peda</span>. Ich bin ein 26 Jahre junger,
-        leidenschaftlicher Full-Stack-Developer aus Hamburg.
+        leidenschaftlicher Front-End Developer aus Hamburg.
         <br />
         <br />
         Ich besitze umfangreiche Kenntnisse in HTML, CSS und JavaScript,

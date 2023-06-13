@@ -1,0 +1,45 @@
+.mobile--nav {
+  width: 70%;
+  margin-left: 10rem;
+  padding: 3rem;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  background-color: var(--dark);
+  z-index: 3;
+}
+
+.mobile--nav-links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile--nav-links > li {
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.mobile--nav-links > li::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -3px;
+  background: var(--gradient-horizontal);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.mobile--nav-links > li:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.mobile--nav-links > li:hover {
+  color: var(--white);
+}

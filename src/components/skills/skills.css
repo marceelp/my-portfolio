@@ -14,7 +14,15 @@
 }
 
 .skills--skill:hover {
-  transform: var(--scale-l);
+  transform: var(--scale-s);
+}
+
+.skills--skill > p {
+  transition: var(--transition);
+}
+
+.skills--current {
+  font-size: 2.4rem;
 }
 
 /* -------- MEDIA QUERIES -------- */

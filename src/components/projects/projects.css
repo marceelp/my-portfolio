@@ -92,10 +92,23 @@
 
 /* -------- MEDIA QUERIES -------- */
 /* ******************************* */
-@media (max-width: 1200px) {
-}
-
 @media (max-width: 768px) {
+  .projects--nums {
+    flex-direction: row;
+    gap: 5rem;
+    top: inherit;
+    bottom: -8rem;
+    left: 3rem;
+  }
+
+  .project-skills {
+    display: none;
+  }
+
+  .project-link {
+    padding-left: 3rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 420px) {

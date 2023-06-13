@@ -1,13 +1,14 @@
-.menu-btn {
+.menu--btn {
   width: 30px;
   height: 30px;
   position: relative;
   cursor: pointer;
+  z-index: 999;
 }
 
-.line-top,
-.line-center,
-.line-bottom {
+.line--top,
+.line--center,
+.line--bottom {
   width: 100%;
   height: 2px;
   position: absolute;
@@ -15,33 +16,40 @@
   transition: all 0.3s ease;
 }
 
-.line-top {
+.line--top {
   top: 0;
 }
 
-.line-center {
+.line--center {
   top: 50%;
   transform: translateY(-50%);
 }
 
-.line-bottom {
+.line--bottom {
   bottom: 0;
 }
 
-.menu-btn.active .line-top {
+.menu--btn.active .line--top {
   width: 100%;
   top: 12px;
   right: 0;
   transform: translateY(6px) rotate(-45deg);
 }
 
-.menu-btn.active .line-center {
+.menu--btn.active .line--center {
   opacity: 0;
 }
 
-.menu-btn.active .line-bottom {
+.menu--btn.active .line--bottom {
   width: 100%;
   bottom: 12px;
   right: 0;
   transform: translateY(-6px) rotate(45deg);
+}
+
+@media (max-width: 380px) {
+  .menu--btn {
+    width: 23px;
+    height: 23px;
+  }
 }

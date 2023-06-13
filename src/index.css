@@ -142,15 +142,15 @@ a {
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 7.2rem;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   p,
@@ -164,4 +164,47 @@ a {
 }
 
 @media (max-width: 420px) {
+  h1 {
+    font-size: 5.4rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  p,
+  a {
+    font-size: 1.3rem;
+  }
+
+  small {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 3.4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  p,
+  a {
+    font-size: 1rem;
+  }
+
+  small {
+    font-size: 0.9rem;
+  }
 }

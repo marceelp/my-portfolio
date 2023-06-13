@@ -1,29 +1,10 @@
-import { useEffect, useState } from "react";
-import LOGO from "../../assets/images/logo.png";
 import MobileMenuBtn from "./MobileMenuBtn";
+import LOGO from "../../assets/images/logo.png";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import "./header.css";
 
-function Header() {
-  const [isClicked, setIsClicked] = useState(false);
-  const [mobile, setMobile] = useState(false);
-
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (innerWidth <= 768) setMobile(true);
-      else setMobile(false);
-    };
-    handleResize();
-
-    addEventListener("resize", handleResize);
-    return () => removeEventListener("resize", handleResize);
-  }, []);
-
+function Header({ mobile, isClicked, handleClick }) {
   return (
     <header>
       <img src={LOGO} alt="Marcel Peda Logo" className="header--logo" />
