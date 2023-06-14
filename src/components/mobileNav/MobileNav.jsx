@@ -9,6 +9,10 @@ const MobileNav = () => {
         <li>Projekte</li>
         <li>Kontakt</li>
       </ul>
+      <div className="mobile--socials">
+        <a href="mailto:marcelpedaa@googlemail.com">Gmail</a>
+        <a href="https://instagram.com/marceelp">Instagram</a>
+      </div>
     </nav>
   );
 };
